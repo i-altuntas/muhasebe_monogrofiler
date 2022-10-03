@@ -4,14 +4,16 @@
 <title>GİRİŞ EKRANI</title>
 <style>
     *{
+        
 
 
     }
     div h2{
-        color: aqua;
+        color:crimson ;
         display: flex;
-        justify-content: center;
+        margin-left: 50px;
         margin-top: 10px;
+        justify-content: center;
 
     }
     div h2:hover{
@@ -19,19 +21,26 @@
 
     }
     #m_ekran{
-        background:grey;
-        border: 1px solid black;
-        margin-left: 150px;
-        margin-top: 40px;
-        width: 400px;
-        height: 300px;
+       
+        border: 2px solid black;
+        margin:2px;
+        width: 98%;
+        height: 98%;
+        
+    
+        
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        flex-wrap: wrap;
     }
     .label{
         margin-top: 5px;
         margin-left: 5px;
-        color:white;
+        color:darkturquoise;
         font-size: 20px;
         font-style: oblique;
+        opacity: 80%;
     }
 
     .veri{
@@ -39,14 +48,16 @@
         border-radius: 5px;
         height: 20px;
         margin: 5px;
+        opacity: 80%;
         
     }
     #tc_1{
-        margin-left: 51px;
+        
     }
     .buton{
         margin-top: 10px;
         margin-left: 15px;
+        opacity: 100%;
     }
     .buton:hover {
         background: red;
@@ -89,6 +100,28 @@
     #unuttum{
         display: none;
     }
+    #form_kapsayıcı{
+        display: flex;
+        flex-direction: row;
+    }
+    #input_divi{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        margin-left: 10px;
+    }
+    #label_divi{
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: center;
+
+    }
+    form{
+        position: relative;
+        margin: auto;
+    }
     
 </style>
 
@@ -97,18 +130,27 @@
     <div id="m_ekran">
         <h2>GİRİŞ EKRANI</h2><br>
         <form>
-            <label class="label">TC:</label>
-            <input type="text" id="tc_1" class="veri" placeholder="TC Kimlik numarası">
-            <label class="ipucu">Örn:11111111111</label><br>
-            
-            <label class="label">PAROLA:</label>
-            <input type="password" id="parola_1" class="veri" placeholder="Şifreniz">
-            <label class="ipucu">Örn:12345</label><br>
-            
-            <button type="button" value="giris" onclick="giris_button()" id="giris" class="buton">GİRİŞ</button>
-            <button type="button" value="şifremiUnuttum" onclick="sifremiUnuttum_button()" id="şifremiUnuttum" class="buton">ŞİFREMİ UNUTTUM</button>
-            <button type="button" value="kayıt" onclick="kayıt_button()" id="kayıt" class="buton">KAYIT OL</button>
+            <div id="form_kapsayıcı">
+                <div id="label_divi">
+                    <label class="label">TC:</label>
+                    <label class="label">PAROLA:</label>
+                    
+                </div>
+                <div id="input_divi">
+                    <input type="text" id="tc_1" class="veri" placeholder="TC Kimlik numarası">
+                    <input type="password" id="parola_1" class="veri" placeholder="Şifreniz">
+                    
+                </div>
+                            
+            </div>
             <br>
+            <div>
+                <button type="button" value="giris" onclick="giris_button()" id="giris" class="buton">GİRİŞ</button>
+                <button type="button" value="şifremiUnuttum" onclick="sifremiUnuttum_button()" id="şifremiUnuttum" class="buton">ŞİFREMİ UNUTTUM</button>
+                <button type="button" value="kayıt" onclick="kayıt_button()" id="kayıt" class="buton">KAYIT OL</button>
+                        
+            </div>
+        </br>
             <div id="unuttum">
                 <label id="eposta_l" class="e_posta_ekranı">Geçerli E-posta:</label>
                 <input type="text" value="mail@gmail.com" id="eposta" class="e_posta_ekranı">
@@ -125,7 +167,8 @@
                 <button type="button" value="kaydolma" onclick="kayıt_ol()" id="kayıt_ol_button" class="kayıt_ol_buton">KAYIT OL</button>
             </div>
         </form>
-
+    
+        </br></br></br></br></br></br></br></br></br></br>
     </div>
     
     <script>
@@ -138,7 +181,7 @@
             }
             else{
                 alert("Lütfen geçerli bir kullanıcı adı ve şifresi giriniz!");
-                window.location.href = "giriş_v1.html";
+                window.location.href = "index.html";
 
             }
         }
