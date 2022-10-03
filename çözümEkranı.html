@@ -14,7 +14,7 @@
             width: 8%;
         }
         #gırıs{
-            width: 45%;
+            width: 40%;
         }
         #borc{
             width: 16%;
@@ -30,7 +30,7 @@
             width: 8%;
         }
         #gırıs2{
-            width: 45%;
+            width: 40%;
         }
         #borc2{
             width: 16%;
@@ -151,7 +151,6 @@
         
         <p id="arttır" class="sorular">
             <button type="button" id="acıcı_buton" onclick="cozucu()">DEFTER SATIRLARI</button>
-            <button type="button" id="kapatıcı_buton" onclick="kapatıcı()">SATIRI KAPAT</button>
             
             SORU 1 ) İşletme banka hesabından 5000 TL çekmiştir.
             
@@ -179,6 +178,7 @@
 
             </div></br>
             <button type="button" id="buton1" onclick="denetle()">KONTROL ET</button>
+            <button type="button" id="kapatıcı_buton" onclick="kapatıcı()">SATIRI KAPAT</button>
             
         </div>
         <p id="arttır" class="sorular">
@@ -280,6 +280,13 @@
             document.getElementById("acıcı_buton").style.display="none";
             document.getElementById("kapatıcı_buton").style.display="inline";
             
+        }
+        function kapatıcı(){
+            document.getElementById("kapsayıcı").style.display="none";
+            document.getElementById("acıcı_buton").style.display="block";
+            
+
+
         }
         function anasayfa(){
 
