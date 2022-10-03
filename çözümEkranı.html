@@ -258,20 +258,13 @@
 
 
         }
-        let sayacDegeri = 0;
+        
         function cozucu(){
             document.getElementById("kapsayıcı").style.display="block";
             document.getElementById("acıcı_buton").style.display="none";
             document.getElementById("kapatıcı_buton").style.display="inline";
-
-            //başlığın yanındaki saniye sayacını başlatıyor.
-            let saniye = document.querySelector("#sayac");
-            sayacDegeri++;
-            saniye.innerHTML=sayacDegeri;
             
         }
-        setInterval(sayac,1000);
-
         function kapatıcı(){
             document.getElementById("kapsayıcı").style.display="none";
             document.getElementById("acıcı_buton").style.display="block";
@@ -283,11 +276,13 @@
 
             window.location.reload()
         }
-        
+        let sayacDegeri = 0;
         function sayac(){
-            
+            let saniye = document.querySelector("#sayac");
+            sayacDegeri++;
+            saniye.innerHTML=sayacDegeri;
         }
-        
+        setInterval(sayac,1000);
 
 
 
