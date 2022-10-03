@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GİRİŞ EKRANI</title>
+<style>
+    *{
+
+
+    }
+    div h2{
+        color: aqua;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+    }
+    div h2:hover{
+        font-style: italic;
+
+    }
+    #m_ekran{
+        background:grey;
+        border: 1px solid black;
+        margin-left: 150px;
+        margin-top: 40px;
+        width: 400px;
+        height: 300px;
+    }
+    .label{
+        margin-top: 5px;
+        margin-left: 5px;
+        color:white;
+        font-size: 20px;
+        font-style: oblique;
+    }
+
+    .veri{
+       
+        border-radius: 5px;
+        height: 20px;
+        margin: 5px;
+        
+    }
+    #tc_1{
+        margin-left: 51px;
+    }
+    .buton{
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    .buton:hover {
+        background: red;
+        border: none;
+        color: azure;
+        text-decoration: underline;
+    }
+    .e_posta_ekranı{
+        margin-top: 20px;
+        margin-left: 10px;
+        padding-left: 5px;
+        font-size: 10px;
+        float: left;
+    }
+    #eposta_l{
+        color: white;
+    }
+    .ipucu{
+        color: white;
+        font-size: 9px;;
+        visibility: hidden;
+    }
+    .veri:hover + .ipucu{
+        visibility: visible;
+    }
+    .kayıt_veri{
+        margin-left: 10px;
+        color: white;
+
+    }
+    #e_posta_kayıt{
+        margin-left: 34px;
+    }
+    #parola_kayıt{
+        margin-left: 42px;
+    }
+    #kayıt_divi{
+        display: none;
+    }
+    #unuttum{
+        display: none;
+    }
+    
+</style>
+
+</head>
+<body>
+    <div id="m_ekran">
+        <h2>GİRİŞ EKRANI</h2><br>
+        <form>
+            <label class="label">TC:</label>
+            <input type="text" id="tc_1" class="veri" placeholder="TC Kimlik numarası">
+            <label class="ipucu">Örn:11111111111</label><br>
+            
+            <label class="label">PAROLA:</label>
+            <input type="password" id="parola_1" class="veri" placeholder="Şifreniz">
+            <label class="ipucu">Örn:12345</label><br>
+            
+            <button type="button" value="giris" onclick="giris_button()" id="giris" class="buton">GİRİŞ</button>
+            <button type="button" value="şifremiUnuttum" onclick="sifremiUnuttum_button()" id="şifremiUnuttum" class="buton">ŞİFREMİ UNUTTUM</button>
+            <button type="button" value="kayıt" onclick="kayıt_button()" id="kayıt" class="buton">KAYIT OL</button>
+            <br>
+            <div id="unuttum">
+                <label id="eposta_l" class="e_posta_ekranı">Geçerli E-posta:</label>
+                <input type="text" value="mail@gmail.com" id="eposta" class="e_posta_ekranı">
+                <button type="button" value="eposta" onclick="gonder()" id="eposta_button" class="e_posta_ekranı buton">GÖNDER</button>
+            </div>
+            <br>
+            <div id="kayıt_divi">
+                <label id="kayıt_veri_1" class="kayıt_veri">İsim soyisim:</label>
+                <input type="text" value="İsimsoyisim" id="isim_soyisim"><br>
+                <label id="kayıt_veri_2" class="kayıt_veri">E-posta:</label>
+                <input type="text" value="E-posta" id="e_posta_kayıt"><br>
+                <label id="kayıt_veri_3" class="kayıt_veri">Parola:</label>
+                <input type="password" value="Parola" id="parola_kayıt">
+                <button type="button" value="kaydolma" onclick="kayıt_ol()" id="kayıt_ol_button" class="kayıt_ol_buton">KAYIT OL</button>
+            </div>
+        </form>
+
+    </div>
+    
+    <script>
+        function giris_button(){
+            var tc_s = Number(document.getElementById("tc_1").value);
+            var parola_s = Number(document.getElementById("parola_1").value);
+            if((tc_s == 12345)&&(parola_s == 12345)){
+                window.location.href = "çözümEkranı.html";
+
+            }
+            else{
+                alert("Lütfen geçerli bir kullanıcı adı ve şifresi giriniz!");
+                window.location.href = "giriş_v1.html";
+
+            }
+        }
+
+        function sifremiUnuttum_button(){
+            document.getElementById("unuttum").style.display="block";
+            document.getElementById("kayıt").style.display="none";
+            document.getElementById("şifremiUnuttum").style.display="none";
+
+
+        }
+        function gonder(){
+            var e_posta= document.getElementById("eposta").value;
+            var dogru_e_posta= "@gmail.com";
+            if(dogru_e_posta ==e_posta){
+                alert("E-posta başarıyla gönderildi");
+                window.location.href = "giriş_v1.html";
+        }
+            else{
+                alert("Lütfen kayıtlı e-posta giriniz");
+                window.location.href = "giriş_v1.html";
+            }
+
+        }
+
+        function kayıt_button(){
+            document.getElementById("kayıt_divi").style.display="block";
+            document.getElementById("kayıt").style.display="none";
+            document.getElementById("şifremiUnuttum").style.display="none";
+        }
+        function kayıt_ol(){
+            alert("Talebiniz Alınmıştır");
+            window.location.href = "giriş_v1.html";
+        }
+      
+    </script>
+
+
+</body>
+</html>

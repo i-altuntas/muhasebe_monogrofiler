@@ -1,0 +1,204 @@
+<html>
+<head>
+<style>
+    #kapsayıcı{
+        background: pink;
+        border: 1px solid black;
+        border-radius: 15px;
+        width: 300px;
+        height: 235;
+        
+    }
+    #ust{
+        width: 90%;
+        height: 40px;
+        margin: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .butonlar{
+        border: 1px solid black;
+        margin: 10px;
+        margin-top: 5px;
+        width: 110px;
+        height: 35px;
+        border-radius: 15;
+        font-weight: bold;
+    }
+    .butonlar:hover{
+        background: red;
+        font-style:italic;
+        border-radius: 10px;
+    }
+    #altt{
+        border: 1px solid black;
+        border-radius: 15px;
+        margin: 10px;
+        height: 200px;
+    }
+    #sol_text{
+        border: 1px solid black;
+        border-radius: 15px;
+        margin: 4px;
+        width: 160px;
+        height: 175px;
+        float: left;
+    }
+    #sag_label{
+        border: 1px solid black;
+        border-radius: 15px;
+        margin: 4px;
+        width: 110px;
+        height: 175px;
+        right: 100px;
+        float: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    input#giris{
+        margin: 10px;
+        margin-bottom: 0px;
+        height: 35px;
+        width: 140px;
+        font-size: 30px;
+        text-align: end;
+    }
+    .labeller_1{
+        margin: 7px;
+        font-size: 13px;
+        margin-left: 10px;
+        color: blueviolet;
+    }
+    .labeller{
+        margin: 7px;
+        font-size: 25px;
+        margin-left: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .kdv_haric_oranları{
+        margin-top: 5px;
+        margin-left: 10px;
+        height: 35px;
+        
+        
+    }
+    .kdv_haric_oranları:hover{
+        background: red;
+        border-radius: 10px;
+    }
+   
+
+    .kdv_dahil_oranları{
+        margin-top: 5px;
+        margin-left: 10px;
+        height: 35px;
+    }
+    .kdv_dahil_oranları:hover{
+        background: red;
+        border-radius: 10px;
+    }
+    #harıcler{
+        display: none;
+    }
+    #dahiller{
+        display: none;
+
+    }
+</style>
+</head>
+<body>
+    <div id="kapsayıcı">
+        <div id="ust">
+            <form>
+                <button type="button" id="kdv_haric_button" class="butonlar" onclick="harıc_ekrana()">KDV HARİÇ</button>
+                <button type="button" id="kdv_dahil_button" class="butonlar" onclick="dahil_ekrana()">KDV DAHİL</button>
+            </form>
+        </div>
+        <div id="sol_text">
+            <form>
+                <input type="text" id="giris">
+                <div id="harıcler">
+                <button type="button" onclick="harıc_18()" id="kdv_18_hariç" class="kdv_haric_oranları">%18 KDV HESAPLA</button>
+                <button type="button" onclick="harıc_8()" id="kdv_8_hariç" class="kdv_haric_oranları">%8 KDV HESAPLA</button><br>
+                <button type="button" onclick="harıc_1()" id="kdv_1_hariç" class="kdv_haric_oranları">%1 KDV HESAPLA</button><br>
+                </div>
+                <div id="dahiller">
+                <button type="button" onclick="dahil_18()" id="kdv_18_dahil" class="kdv_dahil_oranları">%18 KDV HESAPLA</button>
+                <button type="button" onclick="dahil_8()" id="kdv_8_dahil" class="kdv_dahil_oranları">%8 KDV HESAPLA</button><br>
+                <button type="button" onclick="dahil_1()" id="kdv_1_dahil" class="kdv_dahil_oranları">%1 KDV HESAPLA</button><br>
+                </div>
+            </form>
+        </div>
+        <div id="sag_label">
+            <form>
+                <label id="mal_bedeli_yazı" class="labeller_1">TUTARI:</label><br>
+                <label id="mal_bedeli" class="labeller">0.00</label><br>
+                <label class="labeller_1">KDV TUTARI:</label><br>
+                <label id="kdv_tutarı" class="labeller">0.00</label><br>
+                <label class="labeller_1">TOPLAM:</label><br>
+                <label id="toplam_tutar" class="labeller">0.00</label><br>
+            </form>
+
+        </div>
+    </div>
+    <script>
+        function harıc_ekrana(){
+            document.getElementById("dahiller").style.display="none";
+            document.getElementById("harıcler").style.display="block";
+            document.getElementById("kdv_haric_button").style.background="yellow";
+            document.getElementById("kdv_dahil_button").style.background="none";
+        }
+        function dahil_ekrana(){
+            document.getElementById("harıcler").style.display="none";
+            document.getElementById("dahiller").style.display="block";
+            document.getElementById("kdv_dahil_button").style.background="yellow";
+            document.getElementById("kdv_haric_button").style.background="none";
+        }
+        function haric_hesaplamalar(oran){
+            var kdv_oranı = Number(oran);
+            var tutar = Number(document.getElementById("giris").value);
+            var kdv = (tutar * kdv_oranı)/100;
+            var toplam =tutar + kdv;
+            document.getElementById("mal_bedeli").innerHTML=tutar;
+            document.getElementById("kdv_tutarı").innerHTML=kdv;
+            document.getElementById("toplam_tutar").innerHTML=toplam;
+        }
+        function dahil_hesaplamalar(oran1){
+            var toplam = Number(document.getElementById("giris").value);
+            var kdv_gosterge = Number(oran1);
+            var kdv_yuzde = kdv_gosterge/100;
+            var kdv_oranı = kdv_yuzde + 1;
+            var tutar = toplam / kdv_oranı;
+            var kdv = toplam - tutar;
+            kdv=Number(kdv.toFixed(2))
+            tutar=Number(tutar.toFixed(2))
+            document.getElementById("mal_bedeli").innerHTML=tutar;
+            document.getElementById("kdv_tutarı").innerHTML=kdv;
+            document.getElementById("toplam_tutar").innerHTML=toplam;
+        }
+        function harıc_18(){
+            haric_hesaplamalar(18);
+        }
+        function harıc_8(){
+            haric_hesaplamalar(8);
+        }
+        function harıc_1(){
+            haric_hesaplamalar(1);
+        }
+        function dahil_18(){
+            dahil_hesaplamalar(18);
+        }
+        function dahil_8(){
+            dahil_hesaplamalar(8);
+        }
+        function dahil_1(){
+            dahil_hesaplamalar(1);
+        }
+    </script>
+</body>
+
+
+</html>
