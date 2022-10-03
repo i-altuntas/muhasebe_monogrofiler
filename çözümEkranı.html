@@ -81,11 +81,24 @@
        h1{
         text-align: center;
         color:deepskyblue;
+        width: 80%;
+        
+        
+       }
+       #sayac{
+        width: 15%;
+        text-align: center;
+        color:deepskyblue;
+        
+        text-align: center;
         
        }
        #baslık{
-        width: 70%;
+        width: 90%;
         text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
        }
        #menu{
         display: flex;
@@ -149,6 +162,7 @@
     <div id="genel_kapsam_soru1">
         <div id="baslık">
             <h1>MONOGROFİ 1</h1>
+            <div id="sayac">1</div>
 
         </div>
         
@@ -244,12 +258,20 @@
 
 
         }
+        let sayacDegeri = 0;
         function cozucu(){
             document.getElementById("kapsayıcı").style.display="block";
             document.getElementById("acıcı_buton").style.display="none";
             document.getElementById("kapatıcı_buton").style.display="inline";
+
+            //başlığın yanındaki saniye sayacını başlatıyor.
+            let saniye = document.querySelector("#sayac");
+            sayacDegeri++;
+            saniye.innerHTML=sayacDegeri;
             
         }
+        setInterval(sayac,1000);
+
         function kapatıcı(){
             document.getElementById("kapsayıcı").style.display="none";
             document.getElementById("acıcı_buton").style.display="block";
@@ -261,6 +283,11 @@
 
             window.location.reload()
         }
+        
+        function sayac(){
+            
+        }
+        
 
 
 
