@@ -218,19 +218,11 @@
        
 
        <div id="ok_divi">
-            <h3>SONRAKİ SORUYA GEÇİNİZ =></h3>
-            <img src="img/sagok.png" alt="sagok" width="70px" height="59px" id="sag_ok">
-
-
-
+            <h3>SONRAKİ SORU</h3>
+            <img src="img/sagok.png" alt="sagok" width="60px" height="50px" id="sag_ok">
        </div>
 
         
-
-       
-
-
-    
     </div>
     
 
@@ -278,18 +270,10 @@
                 kod_denetimi2==102 & gırıs_denetimi2=="BANKALAR" & borc_denetimi2=="" & alacak_denetimi2 ==5000
             ){
                 document.getElementById("ok_divi").style.display="block";
-                
-
             }
-
-             
-            
-            
-           
-
-
         }
-        
+
+
         function cozucu(){
             document.getElementById("kapsayıcı").style.display="block";
             document.getElementById("acıcı_buton").style.display="none";
@@ -300,9 +284,9 @@
             document.getElementById("kapsayıcı").style.display="none";
             document.getElementById("acıcı_buton").style.display="block";
             
-
-
         }
+
+
         function anasayfa(){
 
             window.location.reload()
@@ -314,6 +298,10 @@
             saniye.innerHTML=sayacDegeri;
         }
         setInterval(sayac,1000);
+        // Çalışan yeni tip foinksiyon
+        document.querySelector("#sag_ok").addEventListener('click', function(){
+            window.location.href = "KDV.html";
+        });
 
 
 
