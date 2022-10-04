@@ -58,15 +58,13 @@
         justify-content: center;
     }
     input#giris{
-        position: relative;
-        margin: auto;
-        float:inherit;
-        border-radius: 15px;
+        margin: 10px;
+        
         width: 90%;
         font-size: 30px;
         text-align: end;
-        
-        
+        position: relative;
+        margin: auto;
     }
     .labeller_1{
         margin: 7px;
@@ -110,18 +108,23 @@
         position: relative;
         
         margin: auto;
+        justify-content: center;
     }
     #dahiller{
         display: none;
         position: relative;
-        
         margin: auto;
-    }
+        
+        justify-content: center;
 
     }
     .form_clası{
         display: flex;
         flex-direction: column;
+    }
+    #bilgi_yazısı{
+        position: relative;
+        margin: auto;
     }
 </style>
 </head>
@@ -135,6 +138,7 @@
         </div>
         <div id="sol_text">
             <form class="form_clası">
+                <p id="bilgi_yazısı">HESAPLAMA YAPABİLİRSİNİZ</p>
                 <input type="text" id="giris">
                 <div id="harıcler">
                 <button type="button" onclick="harıc_18()" id="kdv_18_hariç" class="kdv_haric_oranları">%18 KDV HESAPLA</button>
