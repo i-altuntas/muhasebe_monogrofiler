@@ -6,7 +6,7 @@
         border: 1px solid black;
         border-radius: 15px;
         width: 97%;
-        height: 97%;
+        height: 60%;
         position: relative;
         margin: auto;
         
@@ -43,29 +43,30 @@
         border: 1px solid black;
         border-radius: 15px;
         margin: 4px;
-        width: 160px;
-        height: 175px;
+        width: 55%;
         float: left;
     }
     #sag_label{
         border: 1px solid black;
         border-radius: 15px;
         margin: 4px;
-        width: 110px;
-        height: 175px;
-        right: 100px;
+        width: 40%;
+        
         float: right;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
     input#giris{
-        margin: 10px;
-        margin-bottom: 0px;
-        height: 35px;
-        width: 140px;
+        position: relative;
+        margin: auto;
+        float:inherit;
+        border-radius: 15px;
+        width: 90%;
         font-size: 30px;
         text-align: end;
+        
+        
     }
     .labeller_1{
         margin: 7px;
@@ -84,6 +85,7 @@
         margin-top: 5px;
         margin-left: 10px;
         height: 35px;
+        width: 90%;
         
         
     }
@@ -97,6 +99,7 @@
         margin-top: 5px;
         margin-left: 10px;
         height: 35px;
+        width: 90%;
     }
     .kdv_dahil_oranları:hover{
         background: turquoise;
@@ -104,10 +107,21 @@
     }
     #harıcler{
         display: none;
+        position: relative;
+        
+        margin: auto;
     }
     #dahiller{
         display: none;
+        position: relative;
+        
+        margin: auto;
+    }
 
+    }
+    .form_clası{
+        display: flex;
+        flex-direction: column;
     }
 </style>
 </head>
@@ -120,17 +134,17 @@
             </form>
         </div>
         <div id="sol_text">
-            <form>
+            <form class="form_clası">
                 <input type="text" id="giris">
                 <div id="harıcler">
                 <button type="button" onclick="harıc_18()" id="kdv_18_hariç" class="kdv_haric_oranları">%18 KDV HESAPLA</button>
-                <button type="button" onclick="harıc_8()" id="kdv_8_hariç" class="kdv_haric_oranları">%8 KDV HESAPLA</button><br>
-                <button type="button" onclick="harıc_1()" id="kdv_1_hariç" class="kdv_haric_oranları">%1 KDV HESAPLA</button><br>
+                <button type="button" onclick="harıc_8()" id="kdv_8_hariç" class="kdv_haric_oranları">%8 KDV HESAPLA</button>
+                <button type="button" onclick="harıc_1()" id="kdv_1_hariç" class="kdv_haric_oranları">%1 KDV HESAPLA</button>
                 </div>
                 <div id="dahiller">
                 <button type="button" onclick="dahil_18()" id="kdv_18_dahil" class="kdv_dahil_oranları">%18 KDV HESAPLA</button>
-                <button type="button" onclick="dahil_8()" id="kdv_8_dahil" class="kdv_dahil_oranları">%8 KDV HESAPLA</button><br>
-                <button type="button" onclick="dahil_1()" id="kdv_1_dahil" class="kdv_dahil_oranları">%1 KDV HESAPLA</button><br>
+                <button type="button" onclick="dahil_8()" id="kdv_8_dahil" class="kdv_dahil_oranları">%8 KDV HESAPLA</button>
+                <button type="button" onclick="dahil_1()" id="kdv_1_dahil" class="kdv_dahil_oranları">%1 KDV HESAPLA</button>
                 </div>
             </form>
         </div>
