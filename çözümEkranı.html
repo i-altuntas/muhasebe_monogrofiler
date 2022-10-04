@@ -148,6 +148,7 @@
         display: flex;
         flex-direction: row;
         justify-content: end;
+        display: none;
        }
 
     </style>
@@ -217,7 +218,7 @@
        
 
        <div id="ok_divi">
-            <img src="img/sagok.png" alt="sagok" width="70px" height="59px" id="sagok">
+            <img src="img/sagok.png" alt="sagok" width="70px" height="59px" id="sag_ok">
 
 
 
@@ -267,9 +268,16 @@
                 document.getElementById("carpı_resim2").style.display="inline";
                 document.getElementById("tik_resim2").style.display="none";
             }
-
             else if(kod_denetimi==""){
                 document.getElementById("bos_label").innerHTML="deger giriniz";
+            }
+
+            if(
+                kod_denetimi==100 & gırıs_denetimi=="KASA" & borc_denetimi==5000 & alacak_denetimi =="" &
+                kod_denetimi2==102 & gırıs_denetimi2=="BANKALAR" & borc_denetimi2=="" & alacak_denetimi2 ==5000
+            ){
+                document.getElementById("ok_divi").style.display="inline";
+
             }
 
              
