@@ -2,17 +2,14 @@
 <head>
 <style>
     #kapsayıcı{
-        background: pink;
-        border: 1px solid black;
-        border-radius: 15px;
-        width: 97%;
-        height: 60%;
         position: relative;
         margin: auto;
+        border: 2px solid black;
+        width: 35%;
         
     }
     #ust{
-        width: 60%;
+        width: 97%;
         margin: 5px;
         display: flex;
         flex-direction: row;
@@ -37,7 +34,7 @@
         border: 1px solid black;
         border-radius: 15px;
         margin: 4px;
-        width: 60%;
+        width: 97%;
         
     }
     #sag_label{
@@ -45,7 +42,7 @@
         border-radius: 15px;
         margin: 4px;
         margin-top: 20px;
-        width: 60%;
+        width: 97%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -123,7 +120,7 @@
 </style>
 </head>
 <body>
-    
+    <div id="kapsayıcı">
         <div id="ust">
             <form>
                 <button type="button" id="kdv_haric_button" class="butonlar" onclick="harıc_ekrana()">KDV HARİÇ</button>
@@ -157,7 +154,7 @@
             </form>
 
         </div>
-    
+    </div>
     <script>
         let ozellek_dahiller = document.getElementById("dahiller");
         let ozellek_haricler = document.getElementById("harıcler");
