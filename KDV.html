@@ -7,6 +7,8 @@
         border-radius: 15px;
         width: 300px;
         height: 235;
+        position: relative;
+        margin: auto;
         
     }
     #ust{
@@ -27,7 +29,7 @@
         font-weight: bold;
     }
     .butonlar:hover{
-        background: red;
+        background:turquoise;
         font-style:italic;
         border-radius: 10px;
     }
@@ -86,7 +88,7 @@
         
     }
     .kdv_haric_oranları:hover{
-        background: red;
+        background: turquoise;
         border-radius: 10px;
     }
    
@@ -97,7 +99,7 @@
         height: 35px;
     }
     .kdv_dahil_oranları:hover{
-        background: red;
+        background: turquoise;
         border-radius: 10px;
     }
     #harıcler{
@@ -145,17 +147,31 @@
         </div>
     </div>
     <script>
+        let ozellek_dahiller = document.getElementById("dahiller");
+        let ozellek_haricler = document.getElementById("harıcler");
+        
+
+
+
         function harıc_ekrana(){
-            document.getElementById("dahiller").style.display="none";
-            document.getElementById("harıcler").style.display="block";
-            document.getElementById("kdv_haric_button").style.background="yellow";
+            ozellek_dahiller.style.display="none";
+            ozellek_haricler.style.display="block";
+            document.getElementById("kdv_haric_button").style.background="turquoise";
             document.getElementById("kdv_dahil_button").style.background="none";
+            document.getElementById("mal_bedeli").innerHTML="0.00";
+            document.getElementById("kdv_tutarı").innerHTML="0.00";
+            document.getElementById("toplam_tutar").innerHTML="0.00";
+            
         }
         function dahil_ekrana(){
-            document.getElementById("harıcler").style.display="none";
-            document.getElementById("dahiller").style.display="block";
-            document.getElementById("kdv_dahil_button").style.background="yellow";
+            ozellek_haricler.style.display="none";
+            ozellek_dahiller.style.display="block";
+            document.getElementById("kdv_dahil_button").style.background="turquoise";
             document.getElementById("kdv_haric_button").style.background="none";
+            document.getElementById("mal_bedeli").innerHTML="0.00";
+            document.getElementById("kdv_tutarı").innerHTML="0.00";
+            document.getElementById("toplam_tutar").innerHTML="0.00";
+            
         }
         function haric_hesaplamalar(oran){
             var kdv_oranı = Number(oran);
