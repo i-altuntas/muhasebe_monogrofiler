@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monogrofi 1</title>
+    <style>
+        *{
+            text-decoration: none;
+            list-style: none;
+        }
+        
+        #tik_resim{
+            width: 2.5%;
+            height: auto;
+            display:none;
+           
+        }
+        #tik_resim2{
+            width: 2.5%;
+            height: auto;
+            display:none;
+            
+        }
+        #carpı_resim{
+            width: 2.5%;
+            height: auto;
+            display:none;
+            
+        }
+        #carpı_resim2{
+            width: 2.5%;
+            height: auto;
+            display:none;
+            
+        }
+        #kapsayıcı{
+            padding: 5px;
+            width: 100%;
+           
+        }
+        #kapsayıcı {
+            display: none;
+            
+        }
+       
+       h3{
+        text-align: center;
+        color:deepskyblue;
+        width: 80%;        
+       }
+       .sayacClası{
+        width: 10%;
+       
+        color:deepskyblue;
+        margin: 15px;
+        
+       }
+       #baslık{
+        width: 90%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+       }
+       #alt_baslık{
+        display: flex;
+        flex-direction: row;
+        
+       }
+       #menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 15px;
+        padding: 20px;
+
+       }
+       .madde{
+        margin-left: 8px;
+        padding: 4px;
+       }
+       #baslık1{
+        background-color: aqua;
+        border: 2px solid red;
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 2px;
+        padding-left: 2px;
+
+       }
+       #genel_kapsam_soru1{
+        border: 2px solid red;
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 2px;
+        padding-left: 2px;
+        background-color: bisque;
+        float: left;
+        height: 100%;
+       }
+       #bilanco_baslık{
+        
+        width: 100%;
+        margin-top: 10px;
+        padding-left: 2px;
+       }
+       .baslık_inputu{
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+       position: relative;
+       margin: auto;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       }
+       #aktif_yazısı{
+        float: left;
+        margin-left: 10px;
+       }
+       #pasif_yazısı{
+        float: right;
+        margin-right: 10px;
+       }
+       .floatclear{
+        clear: left;
+        clear: right;
+       }
+       #bilanço_tablo{
+        border-top: 3px solid black;
+       }
+     
+    </style>
+</head>
+<body>
+    <nav id="baslık1">
+        <ol  id="menu">
+            <li>
+                <a href="anasayfa.html"  class="madde" onclick="anasayfa()">Anasayfa</a>
+            </li>
+            <li>
+                <a href="anasayfa.html"  class="madde">Monogrofiler</a>
+            </li>
+            <li>
+                <a href="ıletisim.html"  class="madde">İletişim</a>
+            </li>
+            
+        </ol>
+        
+
+
+
+    </nav>
+    <div id="genel_kapsam_soru1">
+        <div id="baslık">
+            <h3>BİLANÇO 1</h3>
+            
+            <div id="alt_baslık">
+                <p class="sayacClası">Süre:</p>
+                <p id="sayac" class="sayacClası">1</p>
+            </div>
+
+        </div>
+        
+        <p id="arttır" class="sorular">
+                       
+            SON SÖZ YAYINCILIK işletmesi 01.01.2019 tarihinde aşağıdaki kıymetlerle işe başlamıştır.</br>
+            <table>
+                <tr>
+                    <td>100 KASA</td>
+                    <td>12000</td>
+                </tr>
+                <tr>
+                    <td>102 BANKALAR</td>
+                    <td>12000</td>
+                </tr>
+                <tr>
+                    <td>120 ALICILAR</td>
+                    <td>18000</td>
+                </tr>
+                <tr>
+                    <td>131 ORTAKLARDAN ALACAKLAR</td>
+                    <td>25000</td>
+                </tr>
+                <tr>
+                    <td>101 ALINAN ÇEKLER</td>
+                    <td>16000</td>
+                </tr>
+                <tr>
+                    <td>300 BANKA KREDİLERİ</td>
+                    <td>30000</td>
+                </tr>
+                <tr>
+                    <td>191 İNDİRİLECEK KDV</td>
+                    <td>22000</td>
+                </tr>
+                <tr>
+                    <td>100 KASA</td>
+                    <td>12000</td>
+                </tr>
+                <tr>
+                    <td>100 KASA</td>
+                    <td>12000</td>
+                </tr>
+                <tr>
+                    <td>100 KASA</td>
+                    <td>12000</td>
+                </tr>
+                <tr>
+                    <td>100 KASA</td>
+                    <td>12000</td>
+                </tr>
+                <tr>
+                    <td>100 KASA</td>
+                    <td>12000</td>
+                </tr>
+                <tr>
+                    <td>100 KASA</td>
+                    <td>12000</td>
+                </tr>
+                <tr>
+                    <td>100 KASA</td>
+                    <td>12000</td>
+                </tr>
+                <tr>
+                    <td>100 KASA</td>
+                    <td>12000</td>
+                </tr>
+                <tr>
+                    <td>100 KASA</td>
+                    <td>12000</td>
+                </tr>
+                
+            </table>
+
+            <a id="acıcı_buton" onclick="cozucu()">Bilançoyu düzenleyiniz.</a>
+            
+        </p>
+    </div>
+
+
+  <div>gereksiz</div>
+    <div>
+        <div id="bilanco_baslık">
+            <p>
+                <form>
+                    <input type="text" id="bilanco_baslıg" class="baslık_inputu">
+                </form>
+            </p>
+            <p>
+                <form>
+                    <input type="text" id="bilanco_tarih" class="baslık_inputu">
+                </form>
+            </p>
+            <p>
+                <form>
+                    <input type="text" id="bilanco_ibaresi" class="baslık_inputu">
+                </form>
+            </p>
+            <div>
+                <p id="aktif_yazısı">AKTİF</p>
+                <p id="pasif_yazısı">PASİF</p>
+            </div>
+
+        </div>
+        <div class="floatclear"></div>
+        <div id="bilanço_tablo">
+            <div id="aktif_taraf">
+
+            </div>
+            <div id="pasif_taraf">
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+        
+        
+
+        
+    
+    
+
+
+    <script>
+    
+
+        function denetle(){
+            let kod_denetimi = Number(document.getElementById("kodu").value);
+            let gırıs_denetimi = String(document.getElementById("gırıs").value);
+            let borc_denetimi = Number(document.getElementById("borc").value);
+            let alacak_denetimi = Number(document.getElementById("alacak").value);
+
+
+
+            let kod_denetimi2 = Number(document.getElementById("kodu2").value);
+            let gırıs_denetimi2 = String(document.getElementById("gırıs2").value);
+            let borc_denetimi2 = Number(document.getElementById("borc2").value);
+            let alacak_denetimi2 = Number(document.getElementById("alacak2").value);
+            
+
+            if(kod_denetimi==100 & gırıs_denetimi=="KASA" & borc_denetimi==5000 & alacak_denetimi ==""){
+                document.getElementById("tik_resim").style.display="inline";
+                document.getElementById("carpı_resim").style.display="none";
+                
+            }else if (kod_denetimi!=100||gırıs_denetimi!="KASA" || borc_denetimi!=5000 || alacak_denetimi != "undefined"){
+                document.getElementById("carpı_resim").style.display="inline";
+                document.getElementById("tik_resim").style.display="none";
+            }
+            
+            
+            if(kod_denetimi2==102 & gırıs_denetimi2=="BANKALAR" & borc_denetimi2=="" & alacak_denetimi2 ==5000){
+                document.getElementById("tik_resim2").style.display="inline";
+                document.getElementById("carpı_resim2").style.display="none";
+            }else if (kod_denetimi2!=100||gırıs_denetimi2!="KASA" || borc_denetimi2!=5000 || alacak_denetimi2 != "undefined"){
+                document.getElementById("carpı_resim2").style.display="inline";
+                document.getElementById("tik_resim2").style.display="none";
+            }
+            else if(kod_denetimi==""){
+                document.getElementById("bos_label").innerHTML="deger giriniz";
+            }
+
+            if(
+                kod_denetimi==100 & gırıs_denetimi=="KASA" & borc_denetimi==5000 & alacak_denetimi =="" &
+                kod_denetimi2==102 & gırıs_denetimi2=="BANKALAR" & borc_denetimi2=="" & alacak_denetimi2 ==5000
+            ){
+                document.getElementById("ok_divi").style.display="block";
+            }
+        }
+
+
+        function cozucu(){
+            document.getElementById("kapsayıcı").style.display="block";
+            document.getElementById("acıcı_buton").style.display="none";
+            document.getElementById("kapatıcı_buton").style.display="inline";
+            
+        }
+        function kapatıcı(){
+            document.getElementById("kapsayıcı").style.display="none";
+            document.getElementById("acıcı_buton").style.display="block";
+            
+        }
+
+
+        function anasayfa(){
+
+            window.location.reload()
+        }
+        let sayacDegeri = 0;
+        function sayac(){
+            let saniye = document.querySelector("#sayac");
+            sayacDegeri++;
+            saniye.innerHTML=sayacDegeri;
+        }
+        setInterval(sayac,1000);
+        // Çalışan yeni tip foinksiyon
+        document.querySelector("#sag_ok").addEventListener('click', function(){
+            window.location.href = "KDV.html";
+        });
+
+
+
+
+    </script>
+    
+</body>
+</html>
