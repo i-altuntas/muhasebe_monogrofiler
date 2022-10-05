@@ -14,7 +14,7 @@
         background-color: aqua;
         border: 2px solid red;
         border-radius: 5px;
-        width: 97%;
+        width: 96%;
         margin-top: 15px;
         margin-bottom: 15px;
         margin-left: 15px;
@@ -38,7 +38,7 @@
         
         border: 2px solid red;
         border-radius: 5px;
-        width: 97%;
+        width: 96%;
         margin-top: 15px;
         margin-bottom: 15px;
         margin-left: 15px;
@@ -91,7 +91,7 @@
             </li>
         </ol>
     </nav>
-    <div id="orta" class="sevıye">
+    <div id="orta" class="sevıye" onclick="ortaogretim()">
         ORTAÖĞRETİM
         </br>
         LİSE
@@ -102,7 +102,19 @@
     <div id="lısans" class="sevıye">
         LİSANS-UZMANLIK
     </div>
+<script>
+    let ortaogretim_sayfası = document.querySelector("#orta");
+    ortaogretim_sayfası.addEventListener("click", function() {
+    window.location="ortaOgretim.html"
+    });
 
+    
+
+
+
+
+
+</script>
 
 
 
