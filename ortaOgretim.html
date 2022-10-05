@@ -5,9 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ORTAÖĞRETİM</title>
+    <style>
+        *{
+            text-decoration: none;
+            list-style: none;
+        }
+        #baslık1{
+        background-color: aqua;
+        border: 2px solid red;
+        border-radius: 5px;
+        width: 95%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-left: 2px;
+
+       }
+       #menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 15px;
+        padding: 20px;
+
+       }
+       .madde{
+        margin-left: 8px;
+        padding: 4px;
+       }
+       #kapsayıcı{
+        background-color: bisque;
+        border: 2px solid red;
+        border-radius: 5px;
+        width: 95%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-left: 2px;
+        
+        
+
+
+
+       }
+       p{
+        width: 95%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-left: 2px;
+        text-align: center;
+        font-size: 25px;
+        font-style: oblique;
+        font-family: Arial;
+        color:darkred;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-weight: bold;
+       }
+
+
+
+    </style>
 </head>
 <body>
-    <P>ORTAÖĞRETİM</P>
+    
+    <nav id="baslık1">
+        <ol  id="menu">
+            <li>
+                <a href="#"  class="madde" onclick="anasayfa()">Anasayfa</a>
+            </li>
+            <li>
+                <a href="#"  class="madde">Monogrofiler</a>
+            </li>
+            <li>
+                <a href="ıletisim.html"  class="madde">İletişim</a>
+            </li>
+            <li>
+                <a href="KDV.html"  class="madde"><img src="img/hesapMakinası.png" alt="hesapMakinası" width="35" height="35" id="hesapMakinesi">
+                </a>
+            </li>
+        </ol>
+    </nav>
+    <div id="kapsayıcı">
+        <p>BİLANÇO ÖRNEĞİ 1:</p>
+        <p>Monogrofi 1</p>
+
+
+
+    </div>
     
 </body>
 </html>
