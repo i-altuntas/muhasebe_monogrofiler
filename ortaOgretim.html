@@ -76,27 +76,43 @@
     <nav id="baslık1">
         <ol  id="menu">
             <li>
-                <a href="#"  class="madde" onclick="anasayfa()">Anasayfa</a>
+                <a href="anasayfa.html"  class="madde" onclick="anasayfa()">Anasayfa</a>
             </li>
             <li>
-                <a href="#"  class="madde">Monogrofiler</a>
+                <a href="anasayfa.html"  class="madde">Monogrofiler</a>
             </li>
             <li>
                 <a href="ıletisim.html"  class="madde">İletişim</a>
             </li>
-            <li>
-                <a href="KDV.html"  class="madde"><img src="img/hesapMakinası.png" alt="hesapMakinası" width="35" height="35" id="hesapMakinesi">
-                </a>
-            </li>
+            
         </ol>
     </nav>
     <div id="kapsayıcı">
-        <p>BİLANÇO ÖRNEĞİ 1:</p>
-        <p>Monogrofi 1</p>
+        <p id="bilanco">BİLANÇO ÖRNEĞİ 1:</p>
+        <p id="monografi1">Monogrofi 1</p>
 
 
 
     </div>
+    <script>
+        let bilanço1_sayfası = document.querySelector("#bilanco");
+        bilanço1_sayfası.addEventListener("click", function() {
+        window.location="bilanço.html"
+        });
+
+        let monogrofi_sayfası = document.querySelector("#monografi1");
+        monogrofi_sayfası.addEventListener("click", function() {
+        window.location="çözümEkranı.html"
+        });
+    
+        
+    
+    
+    
+    
+    
+    </script>
+
     
 </body>
 </html>
