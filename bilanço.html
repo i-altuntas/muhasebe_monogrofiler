@@ -677,6 +677,40 @@
             let uzunbankakredileri= String(document.getElementById("uzunkrediler").value);
             let uzunbankakredileriTutar = Number(document.getElementById("tutar400").value);
 
+            // SERMAYE VERİLERİ
+            let beşyüz = Number(document.getElementById("kodu500").value);
+            let sermaye= String(document.getElementById("sermaye").value);
+            let sermayeTutar = Number(document.getElementById("tutar500").value);
+
+            // ÖDENMEMİŞ SERMAYE VERİLERİ
+            let beşyüzbir = Number(document.getElementById("kodu501").value);
+            let ödenmemişsermaye= String(document.getElementById("ödenmemiş").value);
+            let ödenmemişsermayeTutar = Number(document.getElementById("tutar501").value);
+
+            // ÖDENMEMİŞ SERMAYE KARAR
+            if(beşyüzbir==501 & ödenmemişsermaye=="ÖDENMEMİŞ SERMAYE" & ödenmemişsermayeTutar==25000){
+                document.getElementById("tik_resim501").style.display="inline";
+                document.getElementById("carpı_resim501").style.display="none";
+                
+            }else if (beşyüzbir!=500||ödenmemişsermaye!="ÖDENMEMİŞ SERMAYE" || ödenmemişsermayeTutar!=25000){
+                document.getElementById("carpı_resim501").style.display="inline";
+                document.getElementById("tik_resim501").style.display="none";
+            }
+
+
+            // SERMAYE KARAR
+
+            if(beşyüz==500 & sermaye=="SERMAYE" & sermayeTutar==35000){
+                document.getElementById("tik_resim500").style.display="inline";
+                document.getElementById("carpı_resim500").style.display="none";
+                
+            }else if (beşyüz!=500||sermaye!="SERMAYE" || sermayeTutar!=35000){
+                document.getElementById("carpı_resim500").style.display="inline";
+                document.getElementById("tik_resim500").style.display="none";
+            }
+
+
+
             //UZUN BANKA KREDİLERİ KARAR
             if(dörtyüz==400 & uzunbankakredileri=="BANKA KREDİLERİ" & uzunbankakredileriTutar==35000){
                 document.getElementById("tik_resim400").style.display="inline";
@@ -686,6 +720,8 @@
                 document.getElementById("carpı_resim400").style.display="inline";
                 document.getElementById("tik_resim400").style.display="none";
             }
+            
+
 
 
 
