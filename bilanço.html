@@ -397,8 +397,8 @@
                 </div>
                 <div class="kapsayıcı1">
                     <input type="text" id="kod257" class="kod_clası" placeholder="KOD">
-                    <input type="text" id="birikmişamortismanlar" class="hesap_clası" placeholder="HESAP ADI - BÜYÜK HARFLE">
-                    <input type="text" id="tutar257" class="tutar_clası">
+                    <input type="text" id="amortismanlar" class="hesap_clası" placeholder="HESAP ADI - BÜYÜK HARFLE">
+                    <input type="text" id="tutaramortismanlar" class="tutar_clası">
                     <img src="img/tik.jpg" alt="tik" id="tik_resim257" class="tik_clası">
                     <img src="img/çarpı.png" alt="tik" id="carpı_resim257" class="carpı_clası">
                 </div>
@@ -516,57 +516,33 @@
             let bankalarTutar = Number(document.getElementById("tutar102").value);
 
             let yüzüç = Number(document.getElementById("kod103").value);
-            let verilençekler= String(document.getElementById("verilençekler").value);
+            let verilençekler= String(document.getElementById("verilencek").value);
             let verilençeklerTutar = Number(document.getElementById("tutar103").value);
-            // 120 ALICILAR
+            // ALICILAR VERİLERİ
             let yüzyirmi = Number(document.getElementById("kod120").value);
             let alıcılar= String(document.getElementById("alıcılar").value);
             let alıcılarTutar = Number(document.getElementById("tutar120").value);
-            // ORTAKLARDAN ALACAKLAR
-            let yüzotuzbeş = Number(document.getElementById("kod135").value);
-            let ortaklardanalacaklar= String(document.getElementById("ortaklardanalacaklar").value);
-            let vortaklardanalacaklarTutar = Number(document.getElementById("tutar135").value);
-            // TİCARİ MALLAR
-            let yüzelliüç = Number(document.getElementById("kod153").value);
-            let ticarimallar= String(document.getElementById("ticarimallar").value);
-            let ticarimallarTutar = Number(document.getElementById("tutar153").value);
-            //İNDİRİLECEK KDV
-            let yüzdoksanbir = Number(document.getElementById("kod191").value);
-            let indirilecekkdv= String(document.getElementById("indirilecekkdv").value);
-            let indirilecekkdvTutar = Number(document.getElementById("tutar191").value);
-            //TAŞITLAR
-            let ikiyüzelliiki = Number(document.getElementById("kod252").value);
-            let taşıtlar= String(document.getElementById("taşıtlar").value);
-            let taşıtlarTutar = Number(document.getElementById("tutar252").value);
-            //DEMİRBAŞLAR
-            let ikiyüzellibeş = Number(document.getElementById("kod255").value);
-            let demirbaşlar= String(document.getElementById("demirbaşlar").value);
-            let demirbaşlarTutar = Number(document.getElementById("tutar255").value);
-            // BİRİKMİŞ AMORTİSMANLAR
-            let ikiyüzelliyedi = Number(document.getElementById("kod257").value);
-            let birikmişamortismanlar= String(document.getElementById("birikmişamortismanlar").value);
-            let birikmişamortismanlarTutar = Number(document.getElementById("tutar257").value);
-
-
-            if(yüzyirmi==120 & alıcılar=="ALICILAR" & alıcılarTutar==18000){
+            // ALICILAR KARAR
+            if(yüzyirmi==120 & alıcılar =="ALICILAR" & alıcılarTutar==18000){
                 document.getElementById("tik_resim120").style.display="inline";
                 document.getElementById("carpı_resim120").style.display="none";
                 
-            }else if (yüzüç!=103||verilençekler!="VERİLEN ÇEKLE" || verilençeklerTutar!=18000){
+            }else if (yüzüç!=103||verilençekler!="VERİLEN ÇEKLER" || verilençeklerTutar!=120000){
                 document.getElementById("carpı_resim103").style.display="inline";
                 document.getElementById("tik_resim103").style.display="none";
             }
 
-
+            //VERİLEN ÇEK KARAR
             if(yüzüç==103 & verilençekler=="VERİLEN ÇEKLER" & verilençeklerTutar==12000){
                 document.getElementById("tik_resim103").style.display="inline";
                 document.getElementById("carpı_resim103").style.display="none";
                 
-            }else if (yüzüç!=103||verilençekler!="VERİLEN ÇEKLE" || verilençeklerTutar!=12000){
+            }else if (yüzüç!=103||verilençekler!="VERİLEN ÇEKLER" || verilençeklerTutar!=12000){
                 document.getElementById("carpı_resim103").style.display="inline";
                 document.getElementById("tik_resim103").style.display="none";
             }
 
+            // BANKALAR KARARI
             if(yüziki==102 & bankalar=="BANKALAR" & bankalarTutar==43000){
                 document.getElementById("tik_resim102").style.display="inline";
                 document.getElementById("carpı_resim102").style.display="none";
@@ -575,7 +551,7 @@
                 document.getElementById("carpı_resim102").style.display="inline";
                 document.getElementById("tik_resim102").style.display="none";
             }
-
+            //ALINAN ÇEK KARARI
             if(yüzbir==101 & alınançek=="ALINAN ÇEKLER" & alınançekTutar==75000){
                  document.getElementById("tik_resim101").style.display="inline";
                  document.getElementById("carpı_resim101").style.display="none";
@@ -584,7 +560,7 @@
                  document.getElementById("carpı_resim101").style.display="inline";
                  document.getElementById("tik_resim101").style.display="none";
              }
-
+             // KASA KARAR
             if(yüz==100 & kasa=="KASA" & kasaTutar==60000){
                 document.getElementById("tik_resim100").style.display="inline";
                 document.getElementById("carpı_resim100").style.display="none";
@@ -607,10 +583,43 @@
 
 
         }
-        // BU FOİNKSİYON EKRANA OK İŞARETİ GETİRİYOR
+
 
         function denetle(){
-           
+            let kod_denetimi = Number(document.getElementById("kodu").value);
+            let gırıs_denetimi = String(document.getElementById("gırıs").value);
+            let borc_denetimi = Number(document.getElementById("borc").value);
+            let alacak_denetimi = Number(document.getElementById("alacak").value);
+
+
+
+            let kod_denetimi2 = Number(document.getElementById("kodu2").value);
+            let gırıs_denetimi2 = String(document.getElementById("gırıs2").value);
+            let borc_denetimi2 = Number(document.getElementById("borc2").value);
+            let alacak_denetimi2 = Number(document.getElementById("alacak2").value);
+            
+
+            if(kod_denetimi==100 & gırıs_denetimi=="KASA" & borc_denetimi==5000 & alacak_denetimi ==""){
+                document.getElementById("tik_resim").style.display="inline";
+                document.getElementById("carpı_resim").style.display="none";
+                
+            }else if (kod_denetimi!=100||gırıs_denetimi!="KASA" || borc_denetimi!=5000 || alacak_denetimi != "undefined"){
+                document.getElementById("carpı_resim").style.display="inline";
+                document.getElementById("tik_resim").style.display="none";
+            }
+            
+            
+            if(kod_denetimi2==102 & gırıs_denetimi2=="BANKALAR" & borc_denetimi2=="" & alacak_denetimi2 ==5000){
+                document.getElementById("tik_resim2").style.display="inline";
+                document.getElementById("carpı_resim2").style.display="none";
+            }else if (kod_denetimi2!=100||gırıs_denetimi2!="KASA" || borc_denetimi2!=5000 || alacak_denetimi2 != "undefined"){
+                document.getElementById("carpı_resim2").style.display="inline";
+                document.getElementById("tik_resim2").style.display="none";
+            }
+            else if(kod_denetimi==""){
+                document.getElementById("bos_label").innerHTML="deger giriniz";
+            }
+
             if(
                 kod_denetimi==100 & gırıs_denetimi=="KASA" & borc_denetimi==5000 & alacak_denetimi =="" &
                 kod_denetimi2==102 & gırıs_denetimi2=="BANKALAR" & borc_denetimi2=="" & alacak_denetimi2 ==5000
