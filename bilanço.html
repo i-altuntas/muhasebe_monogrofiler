@@ -126,14 +126,16 @@
        #aktif_taraf{
         width: 99%;
         margin-left: 2px;
-        background-color: blueviolet;
+        border: 1px solid black;
+        display: none;
        
         
        }
        #pasif_taraf{
         width: 99%;
         margin-left: 2px;
-        background-color: blue;
+        border: 1px solid black;
+        display: none;
        }
        .ana_grup{
         margin: 10px;
@@ -201,7 +203,7 @@
         
         <p id="arttır" class="sorular">
                        
-            10/D ANANİM A.Ş işletmesi 01.01.2019 tarihinde aşağıdaki kıymetlerle işe başlamıştır.</br>
+            10/D A.Ş işletmesi 01.01.2019 tarihinde aşağıdaki kıymetlerle işe başlamıştır.</br>
             <table>
                 <tr>
                     <td>100 KASA</td>
@@ -293,7 +295,8 @@
                 
             </table>
 
-            <a id="acıcı_buton" onclick="cozucu()">Bilançoyu düzenleyiniz.</a>
+            <button id="aktif_butonu" onclick="aktif_etkin()">AKTİF TARAFI ÇÖZÜNÜZ</button>
+            <button id="pasif_buton" onclick="pasif_etkin()">PASİF TARAFI ÇÖZÜNÜZ</button>
             
         </p>
     </div>
@@ -535,15 +538,15 @@
         }
 
 
-        function cozucu(){
-            document.getElementById("kapsayıcı").style.display="block";
-            document.getElementById("acıcı_buton").style.display="none";
+        function aktif_etkin(){
+            document.getElementById("aktif_taraf").style.display="block";
+            document.getElementById("pasif_taraf").style.display="none";
             document.getElementById("kapatıcı_buton").style.display="inline";
             
         }
-        function kapatıcı(){
-            document.getElementById("kapsayıcı").style.display="none";
-            document.getElementById("acıcı_buton").style.display="block";
+        function pasif_etkin(){
+            document.getElementById("aktif_taraf").style.display="none";
+            document.getElementById("pasif_taraf").style.display="block";
             
         }
 
