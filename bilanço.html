@@ -315,12 +315,13 @@
                     <input type="text" id="bilanco_tarih" class="baslık_inputu" placeholder=".../.../...TARİH GİRİNİZ">
                 </form>
             </p>
+            <!--
             <div id="cızgı_ustu">
                 <p id="aktif_yazısı">AKTİF</p>
                 <p id="bilanço_yazısı">AÇILIŞ BİLANÇOSU</p>
                 <p id="pasif_yazısı">PASİF</p>
             </div>
-
+            -->
         </div>
         
         <div id="bilanço_tablo">
@@ -331,10 +332,10 @@
                     
                 </div>
                 
-                <div class="kapsayıcı1">
+                <div class="kapsayıcı1" id="kasasatırı">
                     <input type="text" id="kod100" class="kod_clası" placeholder="KOD">
-                    <input type="text" id="hesap100" class="hesap_clası" placeholder="HESAP ADI - BÜYÜK HARFLE">
-                    <input type="text" id="tutar100" class="tutar_clası">
+                    <input type="text" id="kasa" class="hesap_clası" placeholder="HESAP ADI - BÜYÜK HARFLE">
+                    <input type="text" id="tutarkasa" class="tutar_clası">
                     <img src="img/tik.jpg" alt="tik" id="tik_resim">
                     <img src="img/çarpı.png" alt="tik" id="carpı_resim">
                 </div>
@@ -484,6 +485,8 @@
                
             </div>
 
+            <button onclick="konrol()">AKTİF KONTROL ET</button>
+
 
 
         </div>
@@ -491,7 +494,35 @@
 
     </div>
 
+
     <script>
+
+        function tikekle(eklemeYeri){
+            let tikResmi = document.createElement("img");
+            tikResmi.src = "img/tik.jpg";
+            let resimEklendi = eklemeYeri;
+            resimEklendi.document.appendChild(tikResmi);
+            
+        }
+       
+
+        function konrol(){
+            let yuz = Number(document.getElementById("kod100").value);
+            let kasa= String(document.getElementById("kasa").value);
+            let kasaTutar = Number(document.getElementById("tutarkasa").value);
+
+            if(yuz==100 & kasa=="KASA" & kasaTutar==5000){
+                document.getElementById("tik_resim").style.display="inline";
+                document.getElementById("carpı_resim").style.display="none";
+                
+            }else if (yuz!=100||kasa!="KASA" || kasaTutar!=5000){
+                document.getElementById("carpı_resim").style.display="inline";
+                document.getElementById("tik_resim").style.display="none";
+            }
+
+
+
+        }
 
 
         function denetle(){
@@ -537,11 +568,14 @@
             }
         }
 
-
+        // AKTİF VE PASİF  aktivasyon butonları
         function aktif_etkin(){
             document.getElementById("aktif_taraf").style.display="block";
             document.getElementById("pasif_taraf").style.display="none";
             document.getElementById("kapatıcı_buton").style.display="inline";
+           
+
+            
             
         }
         function pasif_etkin(){
