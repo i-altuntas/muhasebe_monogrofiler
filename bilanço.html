@@ -384,7 +384,7 @@
                 <div class="kapsayıcı1">
                     <input type="text" id="kod252" class="kod_clası" placeholder="KOD">
                     <input type="text" id="binalar" class="hesap_clası" placeholder="HESAP ADI - BÜYÜK HARFLE">
-                    <input type="text" id="tutarbinalar" class="tutar_clası">
+                    <input type="text" id="tutar252" class="tutar_clası">
                     <img src="img/tik.jpg" alt="tik" id="tik_resim252" class="tik_clası">
                     <img src="img/çarpı.png" alt="tik" id="carpı_resim252" class="carpı_clası">
                 </div>
@@ -398,7 +398,7 @@
                 <div class="kapsayıcı1">
                     <input type="text" id="kod257" class="kod_clası" placeholder="KOD">
                     <input type="text" id="amortismanlar" class="hesap_clası" placeholder="HESAP ADI - BÜYÜK HARFLE">
-                    <input type="text" id="tutaramortismanlar" class="tutar_clası">
+                    <input type="text" id="tutar257" class="tutar_clası">
                     <img src="img/tik.jpg" alt="tik" id="tik_resim257" class="tik_clası">
                     <img src="img/çarpı.png" alt="tik" id="carpı_resim257" class="carpı_clası">
                 </div>
@@ -476,7 +476,7 @@
                     
                 </div>
 
-                <button onclick="tikekle()">PASİFİ KONTROL ET</button>
+                <button onclick="konro2()">PASİFİ KONTROL ET</button>
                
             </div>
 
@@ -522,14 +522,101 @@
             let yüzyirmi = Number(document.getElementById("kod120").value);
             let alıcılar= String(document.getElementById("alıcılar").value);
             let alıcılarTutar = Number(document.getElementById("tutar120").value);
+            //ORTAKLARDAN ALACAKLAR VERİLERİ
+            let yüzotuzbir = Number(document.getElementById("kod131").value);
+            let ortaklardanalacaklar= String(document.getElementById("ortaklardanalacaklar").value);
+            let ortaklardanalacaklarTutar = Number(document.getElementById("tutar131").value);
+            // TİCARİ MALLAR  VERİLERİ
+            let yüzelliüç = Number(document.getElementById("kod153").value);
+            let ticarimallar= String(document.getElementById("ticarimallar").value);
+            let ticarimallarTutar = Number(document.getElementById("tutar153").value);
+            //İNDİRİLECEK KDV VERİLERİ
+            let yüzdoksanbir = Number(document.getElementById("kod191").value);
+            let indirilecekkdv= String(document.getElementById("indirilecekkdv").value);
+            let indirilecekkdvTutar = Number(document.getElementById("tutar191").value);
+            // TAŞITLAR VERİLERİ
+            let ikiyüzelliiki = Number(document.getElementById("kod252").value);
+            let binalar= String(document.getElementById("binalar").value);
+            let binalarTutar = Number(document.getElementById("tutar252").value);
+            //DEMİRBAŞLAR VERİLERİ
+            let ikiyüzellibeş = Number(document.getElementById("kod255").value);
+            let demirbaşlar= String(document.getElementById("demirbaşlar").value);
+            let demirbaşlarTutar = Number(document.getElementById("tutar255").value);
+            // BİRİKMİŞ AMORTİSMANLAR VERİLERİ
+            let ikiyüzelliyedi = Number(document.getElementById("kod257").value);
+            let amortismanlar= String(document.getElementById("amortismanlar").value);
+            let amortismanlarTutar = Number(document.getElementById("tutar257").value);
+
+            //BİRİKMİŞ AMORTİSMAN VERİLERİ
+            if(ikiyüzelliyedi==257 & amortismanlar =="BİRİKMİŞ AMORTİSMAN" & amortismanlarTutar ==  12000){
+                document.getElementById("tik_resim257").style.display="inline";
+                document.getElementById("carpı_resim257").style.display="none";
+                
+            }else if (ikiyüzelliyedi!=257||amortismanlar!="BİRİKMİŞ AMORTİSMAN" || amortismanlarTutar!=12000){
+                document.getElementById("carpı_resim257").style.display="inline";
+                document.getElementById("tik_resim257").style.display="none";
+            }
+
+            //DEMİRBAŞLAR KARAR
+            if(ikiyüzellibeş==255 & demirbaşlar =="DEMİRBAŞLAR" & demirbaşlarTutar ==  40000){
+                document.getElementById("tik_resim255").style.display="inline";
+                document.getElementById("carpı_resim255").style.display="none";
+                
+            }else if (ikiyüzellibeş!=255||demirbaşlar!="DEMİRBAŞLAR" || demirbaşlarTutar!=40000){
+                document.getElementById("carpı_resim255").style.display="inline";
+                document.getElementById("tik_resim255").style.display="none";
+            }
+
+            // TAŞITLAR KARAR
+            if(ikiyüzelliiki==252 & binalar =="BİNALAR" & binalarTutar==400000){
+                document.getElementById("tik_resim252").style.display="inline";
+                document.getElementById("carpı_resim252").style.display="none";
+                
+            }else if (ikiyüzelliiki!=252||binalar!="BİNALAR" || binalarTutar!=400000){
+                document.getElementById("carpı_resim252").style.display="inline";
+                document.getElementById("tik_resim252").style.display="none";
+            } 
+
+            //İNDŞRŞLECEK KDV KARAR
+            if(yüzdoksanbir==191 & indirilecekkdv =="İNDİRİLECEK KDV" & indirilecekkdvTutar==27000){
+                document.getElementById("tik_resim191").style.display="inline";
+                document.getElementById("carpı_resim191").style.display="none";
+                
+            }else if (yüzdoksanbir!=191||indirilecekkdv!="İNDİRİLECEK KDV" || indirilecekkdvTutar!=27000){
+                document.getElementById("carpı_resim191").style.display="inline";
+                document.getElementById("tik_resim191").style.display="none";
+            } 
+
+            //TİCARİ MALLAR KARAR
+            if(yüzelliüç==153 & ticarimallar =="TİCARİ MALLAR" & ticarimallarTutar==40000){
+                document.getElementById("tik_resim153").style.display="inline";
+                document.getElementById("carpı_resim153").style.display="none";
+                
+            }else if (yüzelliüç!=153||ticarimallar!="TİCARİ MALLAR" || ticarimallarTutar!=40000){
+                document.getElementById("carpı_resim153").style.display="inline";
+                document.getElementById("tik_resim153").style.display="none";
+            }    
+
+
+            //ORTAKLARDAN ALCAKLAR KARAR
+            if(yüzotuzbir==131 & ortaklardanalacaklar =="ORTAKLARDAN ALACAKLAR" & ortaklardanalacaklarTutar==25000){
+                document.getElementById("tik_resim131").style.display="inline";
+                document.getElementById("carpı_resim131").style.display="none";
+                
+            }else if (yüzotuzbir!=131||ortaklardanalacaklar!="ORTAKLARDAN ALACAKLAR" || ortaklardanalacaklarTutar!=25000){
+                document.getElementById("carpı_resim131").style.display="inline";
+                document.getElementById("tik_resim131").style.display="none";
+            }
+
+
             // ALICILAR KARAR
             if(yüzyirmi==120 & alıcılar =="ALICILAR" & alıcılarTutar==18000){
                 document.getElementById("tik_resim120").style.display="inline";
                 document.getElementById("carpı_resim120").style.display="none";
                 
             }else if (yüzüç!=103||verilençekler!="VERİLEN ÇEKLER" || verilençeklerTutar!=120000){
-                document.getElementById("carpı_resim103").style.display="inline";
-                document.getElementById("tik_resim103").style.display="none";
+                document.getElementById("carpı_resim120").style.display="inline";
+                document.getElementById("tik_resim120").style.display="none";
             }
 
             //VERİLEN ÇEK KARAR
@@ -570,78 +657,26 @@
                 document.getElementById("tik_resim100").style.display="none";
             }
 
+        }
 
-            
-
-
-
-
-
+        function konro2(){
 
 
 
 
 
         }
-
-
-        function denetle(){
-            let kod_denetimi = Number(document.getElementById("kodu").value);
-            let gırıs_denetimi = String(document.getElementById("gırıs").value);
-            let borc_denetimi = Number(document.getElementById("borc").value);
-            let alacak_denetimi = Number(document.getElementById("alacak").value);
-
-
-
-            let kod_denetimi2 = Number(document.getElementById("kodu2").value);
-            let gırıs_denetimi2 = String(document.getElementById("gırıs2").value);
-            let borc_denetimi2 = Number(document.getElementById("borc2").value);
-            let alacak_denetimi2 = Number(document.getElementById("alacak2").value);
-            
-
-            if(kod_denetimi==100 & gırıs_denetimi=="KASA" & borc_denetimi==5000 & alacak_denetimi ==""){
-                document.getElementById("tik_resim").style.display="inline";
-                document.getElementById("carpı_resim").style.display="none";
-                
-            }else if (kod_denetimi!=100||gırıs_denetimi!="KASA" || borc_denetimi!=5000 || alacak_denetimi != "undefined"){
-                document.getElementById("carpı_resim").style.display="inline";
-                document.getElementById("tik_resim").style.display="none";
-            }
-            
-            
-            if(kod_denetimi2==102 & gırıs_denetimi2=="BANKALAR" & borc_denetimi2=="" & alacak_denetimi2 ==5000){
-                document.getElementById("tik_resim2").style.display="inline";
-                document.getElementById("carpı_resim2").style.display="none";
-            }else if (kod_denetimi2!=100||gırıs_denetimi2!="KASA" || borc_denetimi2!=5000 || alacak_denetimi2 != "undefined"){
-                document.getElementById("carpı_resim2").style.display="inline";
-                document.getElementById("tik_resim2").style.display="none";
-            }
-            else if(kod_denetimi==""){
-                document.getElementById("bos_label").innerHTML="deger giriniz";
-            }
-
-            if(
-                kod_denetimi==100 & gırıs_denetimi=="KASA" & borc_denetimi==5000 & alacak_denetimi =="" &
-                kod_denetimi2==102 & gırıs_denetimi2=="BANKALAR" & borc_denetimi2=="" & alacak_denetimi2 ==5000
-            ){
-                document.getElementById("ok_divi").style.display="block";
-            }
-        }
+      
 
         // AKTİF VE PASİF  aktivasyon butonları
         function aktif_etkin(){
             document.getElementById("aktif_taraf").style.display="block";
             document.getElementById("pasif_taraf").style.display="none";
             document.getElementById("kapatıcı_buton").style.display="inline";
-           
-
-            
-            
         }
         function pasif_etkin(){
             document.getElementById("aktif_taraf").style.display="none";
             document.getElementById("pasif_taraf").style.display="block";
-            
         }
 
 
