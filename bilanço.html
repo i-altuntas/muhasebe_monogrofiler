@@ -476,7 +476,7 @@
                     
                 </div>
 
-                <button onclick="konro2()">PASİFİ KONTROL ET</button>
+                <button onclick="konrol2()">PASİF KONTROL ET</button>
                
             </div>
 
@@ -659,7 +659,54 @@
 
         }
 
-        function konro2(){
+        function konrol2(){
+            let üçyüz = Number(document.getElementById("kodu300").value);
+            let bankakredileri= String(document.getElementById("kısakrediler").value);
+            let bankakredileriTutar = Number(document.getElementById("tutar300").value);
+            // ÇIKARILMIŞ BONOLAR VERİLERİ
+            let üçyüzsekiz = Number(document.getElementById("kodu308").value);
+            let çıkarılmıçbonolar= String(document.getElementById("çıkarılmıçbonolar").value);
+            let çıkarılmıçbonolarTutar = Number(document.getElementById("tutar308").value);
+            // BORÇ SENETLERİ VERİLERİ
+            let üçyüzyirmibir = Number(document.getElementById("kodu321").value);
+            let borçsenetleri= String(document.getElementById("borçsenetleri").value);
+            let borçsenetleriTutar = Number(document.getElementById("tutar321").value);
+
+            // BORÇ SENETLERİ
+            if(üçyüzyirmibir==321 & borçsenetleri=="BORÇ SENETLERİ" & borçsenetleriTutar==52000){
+                document.getElementById("tik_resim321").style.display="inline";
+                document.getElementById("carpı_resim321").style.display="none";
+                
+            }else if (üçyüzyirmibir!=321||borçsenetleri!="BORÇ SENETLERİ" || borçsenetleriTutar!=52000){
+                document.getElementById("carpı_resim321").style.display="inline";
+                document.getElementById("tik_resim321").style.display="none";
+            }
+
+            // ÇIKARILMIŞ BONOLAR
+            if(üçyüzsekiz==308 & çıkarılmıçbonolar=="ÇIKARILMIŞ BONOLAR" & çıkarılmıçbonolarTutar==80000){
+                document.getElementById("tik_resim308").style.display="inline";
+                document.getElementById("carpı_resim308").style.display="none";
+                
+            }else if (üçyüzsekiz!=308||çıkarılmıçbonolar!="ÇIKARILMIŞ BONOLAR" || bankakredileriTutar!=80000){
+                document.getElementById("carpı_resim308").style.display="inline";
+                document.getElementById("tik_resim308").style.display="none";
+            }
+
+            
+
+
+
+
+
+             // KISA BANKA KREDİLERİ
+             if(üçyüz==300 & bankakredileri=="BANKA KREDİLERİ" & bankakredileriTutar==30000){
+                document.getElementById("tik_resim300").style.display="inline";
+                document.getElementById("carpı_resim300").style.display="none";
+                
+            }else if (üçyüz!=300||bankakredileri!="BANKA KREDİLERİ" || bankakredileriTutar!=30000){
+                document.getElementById("carpı_resim300").style.display="inline";
+                document.getElementById("tik_resim300").style.display="none";
+            }
 
 
 
