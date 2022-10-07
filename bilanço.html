@@ -88,7 +88,6 @@
         width: 100%;
         margin-top: 2px;
         padding-left: 2px;
-
        }
        #genel_kapsam_soru1{
         border: 2px solid red;
@@ -96,38 +95,36 @@
         width: 100%;
         margin-top: 2px;
         padding-left: 2px;
-        background-color: bisque;
+        background-color:bisque;
         float: left;
         height: 100%;
        }
-       #bilanco_baslık{
-        
-        width: 100%;
-        margin-top: 10px;
-        padding-left: 2px;
+       .bosluk{
+       color: bisque;
+       }
+       #bilanco_baslıg{
+        width: 70%;
+       }
+       #bilanco_tarih{
+        width: 20%;
        }
        .baslık_inputu{
         text-align: center;
         margin: 10px;
         padding: 10px;
-       position: relative;
-       margin: auto;
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
+        position: relative;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 11px;
        }
-       #aktif_yazısı{
-        float: left;
-        margin-left: 10px;
+       #cızgı_ustu{
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
        }
-       #pasif_yazısı{
-        float: right;
-        margin-right: 10px;
-       }
-       .floatclear{
-        clear: left;
-        clear: right;
-       }
+      
        #bilanço_tablo{
         border-top: 3px solid black;
         clear: left;
@@ -150,6 +147,7 @@
         padding: 0px;
         background-color: blue;
        }
+
       
      
     </style>
@@ -191,67 +189,60 @@
                 <tr>
                     <td>100 KASA</td>
                     <td>12000</td>
+                    <td class="bosluk">.......</td>
+                    <td>100 KASA</td>
+                    <td>12000</td>
                 </tr>
                 <tr>
                     <td>102 BANKALAR</td>
+                    <td>12000</td>
+                    <td class="bosluk">.......</td>
+                    <td>100 KASA</td>
                     <td>12000</td>
                 </tr>
                 <tr>
                     <td>120 ALICILAR</td>
                     <td>18000</td>
+                    <td class="bosluk">.......</td>
+                    <td>100 KASA</td>
+                    <td>12000</td>
                 </tr>
                 <tr>
                     <td>131 ORTAKLARDAN ALACAKLAR</td>
                     <td>25000</td>
+                    <td class="bosluk">.......</td>
+                    <td>100 KASA</td>
+                    <td>12000</td>
                 </tr>
                 <tr>
                     <td>101 ALINAN ÇEKLER</td>
                     <td>16000</td>
+                    <td class="bosluk">.......</td>
+                    <td>100 KASA</td>
+                    <td>12000</td>
                 </tr>
                 <tr>
                     <td>300 BANKA KREDİLERİ</td>
                     <td>30000</td>
+                    <td class="bosluk">.......</td>
+                    <td>100 KASA</td>
+                    <td>12000</td>
                 </tr>
                 <tr>
                     <td>191 İNDİRİLECEK KDV</td>
                     <td>22000</td>
-                </tr>
-                <tr>
+                    <td class="bosluk">.......</td>
                     <td>100 KASA</td>
                     <td>12000</td>
                 </tr>
                 <tr>
                     <td>100 KASA</td>
                     <td>12000</td>
-                </tr>
-                <tr>
+                    <td class="bosluk">.......</td>
                     <td>100 KASA</td>
                     <td>12000</td>
                 </tr>
-                <tr>
-                    <td>100 KASA</td>
-                    <td>12000</td>
-                </tr>
-                <tr>
-                    <td>100 KASA</td>
-                    <td>12000</td>
-                </tr>
-                <tr>
-                    <td>100 KASA</td>
-                    <td>12000</td>
-                </tr>
-                <tr>
-                    <td>100 KASA</td>
-                    <td>12000</td>
-                </tr>
-                <tr>
-                    <td>100 KASA</td>
-                    <td>12000</td>
-                </tr>
-                <tr>
-                    <td>100 KASA</td>
-                    <td>12000</td>
-                </tr>
+                
                 
             </table>
 
@@ -261,26 +252,22 @@
     </div>
 
 
-  <div>gereksiz</div>
+  <div>.</div>
     <div>
         <div id="bilanco_baslık">
             <p>
                 <form>
-                    <input type="text" id="bilanco_baslıg" class="baslık_inputu">
+                    <input type="text" id="bilanco_baslıg" class="baslık_inputu" placeholder="İŞLETME ADI GİRİNİZ">
                 </form>
             </p>
             <p>
                 <form>
-                    <input type="text" id="bilanco_tarih" class="baslık_inputu">
+                    <input type="text" id="bilanco_tarih" class="baslık_inputu" placeholder=".../.../...TARİH GİRİNİZ">
                 </form>
             </p>
-            <p>
-                <form>
-                    <input type="text" id="bilanco_ibaresi" class="baslık_inputu">
-                </form>
-            </p>
-            <div>
+            <div id="cızgı_ustu">
                 <p id="aktif_yazısı">AKTİF</p>
+                <p id="bilanço_yazısı">AÇILIŞ BİLANÇOSU</p>
                 <p id="pasif_yazısı">PASİF</p>
             </div>
 
