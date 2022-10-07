@@ -131,11 +131,27 @@
        }
        #aktif_taraf{
         width: 97%;
+        margin-left: 10px;
         background-color: blueviolet;
+       
+        
        }
        #pasif_taraf{
         width: 97%;
+        margin-left: 10px;
         background-color: blue;
+       }
+       .kod_clası{
+        width: 12%;
+        margin-left: 5px;
+       }
+       .hesap_clası{
+        width: 50%;
+        margin-left: 5px;
+       }
+       .tutar_clası{
+        width: 20%;
+        margin-left: 5px;
        }
       
        
@@ -266,13 +282,27 @@
         
         <div id="bilanço_tablo">
             <div id="aktif_taraf">
-                
                 <label>DÖNEN VARLIKLAR</label>
+                <div class="kapsayıcı1">
+                    <input type="text" id="kodu" class="kod_clası" placeholder="KOD">
+                    <input type="text" id="gırıs" class="hesap_clası" placeholder="HESAP ADI - BÜYÜK HARFLE">
+                    <input type="text" id="tutar" class="tutar_clası">
+                    <img src="img/tik.jpg" alt="tik" id="tik_resim">
+                    <img src="img/çarpı.png" alt="tik" id="carpı_resim">
+                </div></br>
+                
                     
 
             </div>
             <div id="pasif_taraf">
-                <label>DÖNEN VARLIKLAR</label>
+                <label>3.KISA VADELİ YABANCI KAYNAKLAR</label>
+                <div class="kapsayıcı1">
+                    <input type="text" id="kodu" class="kod_clası" placeholder="KOD">
+                    <input type="text" id="gırıs" class="hesap_clası" placeholder="HESAP ADI - BÜYÜK HARFLE">
+                    <input type="text" id="tutar" class="tutar_clası">
+                    <img src="img/tik.jpg" alt="tik" id="tik_resim">
+                    <img src="img/çarpı.png" alt="tik" id="carpı_resim">
+                </div></br>
                
             </div>
 
