@@ -759,6 +759,23 @@
                 document.getElementById("tik_resim300").style.display="none";
             }
 
+            let toplam_kvyk = document.querySelector("#toplam_kvyk");
+            toplam_kvyk_tl = bankakredileriTutar + çıkarılmıçbonolarTutar + borçsenetleriTutar;
+            toplam_kvyk.innerHTML = toplam_kvyk_tl;
+
+            let toplam_uvyk = document.querySelector("#toplam_uvyk");
+            toplam_uvyk_tl = uzunbankakredileriTutar;
+            toplam_uvyk.innerHTML=toplam_uvyk_tl;
+
+            let toplam_ozkaynak = document.querySelector("#toplam_ozkaynak");
+            toplam_ozkaynak_tl = sermayeTutar - ödenmemişsermayeTutar;
+            toplam_ozkaynak.innerHTML = toplam_ozkaynak_tl;
+
+
+            let toplam_kaynaklar = document.querySelector("#toplam_kaynaklar");
+            toplam_kaynaklar_tl = toplam_kvyk_tl + toplam_uvyk_tl + toplam_ozkaynak_tl
+            toplam_kaynaklar.innerHTML = toplam_kaynaklar_tl;
+
 
         }
       
