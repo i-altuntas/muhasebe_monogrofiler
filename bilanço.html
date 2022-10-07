@@ -672,6 +672,27 @@
             let borçsenetleri= String(document.getElementById("borçsenetleri").value);
             let borçsenetleriTutar = Number(document.getElementById("tutar321").value);
 
+            //BANKA KREDİLERİ
+            let dörtyüz = Number(document.getElementById("kodu400").value);
+            let uzunbankakredileri= String(document.getElementById("uzunkrediler").value);
+            let uzunbankakredileriTutar = Number(document.getElementById("tutar400").value);
+
+            //UZUN BANKA KREDİLERİ KARAR
+            if(dörtyüz==400 & uzunbankakredileri=="BANKA KREDİLERİ" & uzunbankakredileriTutar==35000){
+                document.getElementById("tik_resim400").style.display="inline";
+                document.getElementById("carpı_resim400").style.display="none";
+                
+            }else if (dörtyüz!=400||uzunbankakredileri!="BANKA KREDİLERİ" || uzunbankakredileriTutar!=35000){
+                document.getElementById("carpı_resim400").style.display="inline";
+                document.getElementById("tik_resim400").style.display="none";
+            }
+
+
+
+
+
+
+
             // BORÇ SENETLERİ
             if(üçyüzyirmibir==321 & borçsenetleri=="BORÇ SENETLERİ" & borçsenetleriTutar==52000){
                 document.getElementById("tik_resim321").style.display="inline";
