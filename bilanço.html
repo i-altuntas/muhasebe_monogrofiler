@@ -510,8 +510,34 @@
             let yüzbir = Number(document.getElementById("kod101").value);
             let alınançek= String(document.getElementById("alınançek").value);
             let alınançekTutar = Number(document.getElementById("tutar101").value);
+
+            let yüziki = Number(document.getElementById("kod102").value);
+            let bankalar= String(document.getElementById("bankalar").value);
+            let bankalarTutar = Number(document.getElementById("tutar102").value);
+
+            let yüziç = Number(document.getElementById("kod103").value);
+            let verilençekler= String(document.getElementById("verilençekler").value);
+            let verilençeklerTutar = Number(document.getElementById("tutar103").value);
             
 
+
+            if(yüzüç==103 & verilençekler=="VERİLEN ÇEKLER" & verilençeklerTutar==12000){
+                document.getElementById("tik_resim103").style.display="inline";
+                document.getElementById("carpı_resim103").style.display="none";
+                
+            }else if (yüzüç!=103||verilençekler!="VERİLEN ÇEKLE" || verilençeklerTutar!=12000){
+                document.getElementById("carpı_resim103").style.display="inline";
+                document.getElementById("tik_resim103").style.display="none";
+            }
+
+            if(yüziki==102 & bankalar=="BANKALAR" & bankalarTutar==43000){
+                document.getElementById("tik_resim102").style.display="inline";
+                document.getElementById("carpı_resim102").style.display="none";
+                
+            }else if (yüziki!=102||bankalar!="BANKALAR" || bankalarTutar!=43000){
+                document.getElementById("carpı_resim102").style.display="inline";
+                document.getElementById("tik_resim102").style.display="none";
+            }
 
             if(yüz==100 & kasa=="KASA" & kasaTutar==60000){
                 document.getElementById("tik_resim100").style.display="inline";
