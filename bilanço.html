@@ -316,7 +316,7 @@
             <div id="aktif_taraf">
                 <div class="ana_grup">
                     <h2>DÖNEN VARLIKLAR</h2>
-                    <h2>......</h2>
+                    <h2 id="toplam_dönen_varlıklar">......</h2>
                     
                 </div>
                 
@@ -378,7 +378,7 @@
                 </div>
                 <div class="ana_grup">
                     <h2>DURAN VARLIKLAR</h2>
-                    <h2>......</h2>
+                    <h2 id="toplam_duran_varlıklar">......</h2>
                     
                 </div>
                 <div class="kapsayıcı1">
@@ -657,6 +657,18 @@
                 document.getElementById("tik_resim100").style.display="none";
             }
 
+            let toplam_dönen_varlıklar = document.querySelector("#toplam_dönen_varlıklar");
+            toplam_dönen_varlıklar_tl = kasaTutar + alınançekTutar + bankalarTutar + alıcılarTutar + ticarimallarTutar +ortaklardanalacaklarTutar + indirilecekkdvTutar - verilençeklerTutar;
+            toplam_dönen_varlıklar.innerHTML = toplam_dönen_varlıklar_tl;
+
+            let toplam_duran_varlıklar = document.querySelector("#toplam_duran_varlıklar");
+            toplam_duran_varlıklar_tl = demirbaşlarTutar + binalarTutar - amortismanlarTutar;
+            toplam_duran_varlıklar.innerHTML = toplam_duran_varlıklar_tl;
+
+            let toplam_varlıklar = document.querySelector("#toplam_varlıklar");
+            toplam_varlıklar_tl = toplam_duran_varlıklar_tl + toplam_dönen_varlıklar_tl;
+            toplam_varlıklar.innerHTML = toplam_varlıklar_tl;
+            
         }
 
         function konrol2(){
@@ -697,9 +709,7 @@
                 document.getElementById("tik_resim501").style.display="none";
             }
 
-
             // SERMAYE KARAR
-
             if(beşyüz==500 & sermaye=="SERMAYE" & sermayeTutar==532000){
                 document.getElementById("tik_resim500").style.display="inline";
                 document.getElementById("carpı_resim500").style.display="none";
@@ -708,8 +718,6 @@
                 document.getElementById("carpı_resim500").style.display="inline";
                 document.getElementById("tik_resim500").style.display="none";
             }
-
-
 
             //UZUN BANKA KREDİLERİ KARAR
             if(dörtyüz==400 & uzunbankakredileri=="BANKA KREDİLERİ" & uzunbankakredileriTutar==35000){
@@ -721,14 +729,6 @@
                 document.getElementById("tik_resim400").style.display="none";
             }
             
-
-
-
-
-
-
-
-
             // BORÇ SENETLERİ
             if(üçyüzyirmibir==321 & borçsenetleri=="BORÇ SENETLERİ" & borçsenetleriTutar==52000){
                 document.getElementById("tik_resim321").style.display="inline";
@@ -749,12 +749,6 @@
                 document.getElementById("tik_resim308").style.display="none";
             }
 
-            
-
-
-
-
-
              // KISA BANKA KREDİLERİ
              if(üçyüz==300 & bankakredileri=="BANKA KREDİLERİ" & bankakredileriTutar==30000){
                 document.getElementById("tik_resim300").style.display="inline";
@@ -764,9 +758,6 @@
                 document.getElementById("carpı_resim300").style.display="inline";
                 document.getElementById("tik_resim300").style.display="none";
             }
-
-
-
 
 
         }
