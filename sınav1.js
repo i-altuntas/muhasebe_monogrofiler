@@ -1,0 +1,34 @@
+let hesap1 = document.querySelector("#hesap1");
+let hesap2 = document.querySelector("#hesap2");
+
+let hesaplar1 = fetch("hesaplar.json")
+.then(response =>
+    response.json())
+.then(data=>{
+    for(let i=0; i<data.hesaplar.length;i++){
+        let option = document.createElement("option")
+        option.textContent = data.hesaplar[i].ad
+        hesap1.appendChild(option);
+    }
+    for(let i=0; i<data.hesaplar.length;i++){
+        let option = document.createElement("option")
+        option.textContent = data.hesaplar[i].ad
+        hesap2.appendChild(option);
+    }
+
+
+
+    let sonuc = document.getElementById("sonuc")
+    sonuc.addEventListener("click",olay=>{
+        if(hesap1.value == data.hesaplar[0].ad){
+
+            alert("başarılı")
+    
+        }else{
+            alert("başarısız")
+        }
+   
+    })
+})
+
+
