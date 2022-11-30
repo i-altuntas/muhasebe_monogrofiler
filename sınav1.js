@@ -1,6 +1,9 @@
 let hesap1 = document.querySelector("#hesap1");
 let hesap2 = document.querySelector("#hesap2");
-
+let borc1 = document.querySelector("#borc1");
+let alacak1 = document.querySelector("#alacak1");
+let borc2 = document.querySelector("#borc2");
+let alacak2 = document.querySelector("#alacak2");
 let hesaplar1 = fetch("hesaplar.json")
 .then(response =>
     response.json())
@@ -20,7 +23,7 @@ let hesaplar1 = fetch("hesaplar.json")
 
     let sonuc = document.getElementById("sonuc")
     sonuc.addEventListener("click",olay=>{
-        if(hesap1.value == data.hesaplar[0].ad){
+        if(hesap1.value == data.hesaplar[0].ad & borc1.value==85000 & hesap2.value == data.hesaplar[1].ad & alacak2.value==85000 ){
 
             alert("başarılı")
     
