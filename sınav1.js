@@ -24,8 +24,8 @@ let hesaplar1 = fetch("hesaplar.json")
         if(hesap1.value == data.hesaplar[0].ad & borc1.value==85000 & hesap2.value == data.hesaplar[1].ad & alacak2.value==85000 ){
 
             alert("başarılı")         
-           document.querySelector("#sınav_soru1").display="none"
-           document.querySelector("#sınav_soru2").display="block"
+           document.querySelector("#sınav_soru1").style.display="none"
+           document.querySelector("#sınav_soru2").style.display="block"
         }else{
             alert("başarısız")
         }
