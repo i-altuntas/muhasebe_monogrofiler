@@ -19,15 +19,12 @@ let hesaplar1 = fetch("hesaplar.json")
         hesap2.appendChild(option);
     }
 
-
-
     let sonuc = document.getElementById("sonuc")
     sonuc.addEventListener("click",olay=>{
         if(hesap1.value == data.hesaplar[0].ad & borc1.value==85000 & hesap2.value == data.hesaplar[1].ad & alacak2.value==85000 ){
 
-            alert("başarılı")
-            
-    
+            alert("başarılı")         
+            window.location="sınav_soru2.html"
         }else{
             alert("başarısız")
         }
